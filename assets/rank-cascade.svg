@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+<title id="title">One rank at a time: the error cascade</title><desc id="desc">Original conceptual schematic. Each rank-one update leaves a residual for the next stage. An error from stage one can propagate through both later stages. The colored areas are schematic, not measured error magnitudes.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#687e9e" stroke-width="1.3"/></marker><pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#dbe4f1" stroke-width=".8"/></pattern></defs>
+<rect width="640" height="440" fill="#f3f6fb"/><rect width="640" height="440" fill="url(#grid)" opacity=".45"/>
+<g font-family="Arial, sans-serif"><text x="38" y="47" fill="#345f95" font-size="12" letter-spacing="2">SEQUENTIAL LOW-RANK LEARNING</text><text x="38" y="89" font-family="Georgia, serif" font-size="29" fill="#142d54">Small updates. Lasting effects.</text>
+<g fill="#fff" stroke="#becde3"><rect x="40" y="142" width="144" height="128" rx="8"/><rect x="248" y="142" width="144" height="128" rx="8"/><rect x="456" y="142" width="144" height="128" rx="8"/></g>
+<g stroke="#687e9e" stroke-width="1.5" marker-end="url(#arrow)"><path d="M193 207H236"/><path d="M401 207H444"/></g>
+<g fill="#142d54" font-size="15" text-anchor="middle"><text x="112" y="169">STAGE 1</text><text x="320" y="169">STAGE 2</text><text x="528" y="169">STAGE 3</text></g>
+<g fill="#345f95"><rect x="74" y="189" width="16" height="56" rx="2"/><rect x="102" y="199" width="49" height="13" rx="2"/><rect x="282" y="189" width="16" height="56" rx="2"/><rect x="310" y="199" width="49" height="13" rx="2"/><rect x="490" y="189" width="16" height="56" rx="2"/><rect x="518" y="199" width="49" height="13" rx="2"/></g>
+<g font-size="13" fill="#536784" text-anchor="middle"><text x="216" y="188">residual</text><text x="424" y="188">residual</text><text x="112" y="294">rank-1 update</text><text x="320" y="294">rank-1 update</text><text x="528" y="294">rank-1 update</text></g>
+<path d="M112 318C193 312 237 333 320 333S457 354 528 354" stroke="#6289bd" stroke-width="3" fill="none"/>
+<g fill="#6289bd"><circle cx="112" cy="318" r="5"/><circle cx="320" cy="333" r="8"/><circle cx="528" cy="354" r="12"/></g>
+<text x="38" y="391" font-size="15" fill="#345176">An early error can travel through later stages.</text><text x="38" y="419" font-size="11" fill="#606e83">CONCEPTUAL SCHEMATIC · NOT MEASURED RESULTS</text></g></svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">Two limits on neural distance estimation</title>
+  <desc id="desc">A conceptual diagram, not experimental data. Pairwise sequence information and a mismatch between simulated and biological data both affect evolutionary distance estimates.</desc>
+  <rect width="640" height="440" fill="#f3f6fb"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" text-anchor="middle">
+    <text x="320" y="53" font-size="17" fill="#345f95" letter-spacing="2">FROM SIMULATION TO BIOLOGY</text>
+    <rect x="36" y="89" width="268" height="124" rx="9" fill="#fff" stroke="#dce3ee"/>
+    <rect x="336" y="89" width="268" height="124" rx="9" fill="#fff" stroke="#dce3ee"/>
+    <text x="170" y="134" fill="#142d54" font-size="23">Input information</text>
+    <text x="170" y="171" fill="#606e83" font-size="18">What can two sequences</text>
+    <text x="170" y="195" fill="#606e83" font-size="18">tell us?</text>
+    <text x="470" y="134" fill="#142d54" font-size="23">Distribution shift</text>
+    <text x="470" y="171" fill="#606e83" font-size="18">How well do simulations</text>
+    <text x="470" y="195" fill="#606e83" font-size="18">match the data?</text>
+    <path d="M170 213v35h300v-35M320 248v37" fill="none" stroke="#345f95" stroke-width="3"/>
+    <path d="m312 278 8 9 8-9" fill="none" stroke="#345f95" stroke-width="3"/>
+    <rect x="112" y="293" width="416" height="67" rx="9" fill="#142d54"/>
+    <text x="320" y="335" fill="#fff" font-size="23">Evolutionary distance estimate</text>
+    <text x="320" y="404" fill="#606e83" font-size="16">Conceptual overview</text>
+  </g>
+</svg>

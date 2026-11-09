@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Local gradient-based rank-one recovery in nonlinear low-rank models. Research overview and manuscript PDF.">
+  <meta name="theme-color" content="#142d54">
+  <title>Nonlinear rank-one recovery · Mahtab Alizadeh Vandchali</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261109-refined-1">
+  <link rel="stylesheet" href="nonlinear.css?v=20261107-academic-2">
+<meta name="site-revision" content="20261107-academic-2">
+<link rel="canonical" href="https://mahiav.github.io/nonlinear.html">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="nav-wrap"><a class="wordmark" href="index.html">Mahtab Alizadeh Vandchali</a><a class="research-back" href="index.html#publications">← Publications &amp; preprints</a></div>
+</header>
+<main class="research-page" id="main" tabindex="-1">
+  <header class="research-header">
+    <p class="eyebrow">NONLINEAR LOW-RANK LEARNING · PREPRINT</p>
+    <h1>A Local Theory of Gradient-Based Rank-One Recovery in Nonlinear Low-Rank Models</h1>
+    <p class="research-deck">We studied how a model’s gradient can guide its next low-rank update.</p>
+    <p class="research-meta"><strong>Mahtab Alizadeh Vandchali</strong>, Fangshuo Liao, Anastasios Kyrillidis</p>
+    <div class="research-downloads">
+      <a href="assets/papers/nonlinear-rank-one-recovery.pdf">Read the preprint <span>PDF · 17.3 MB ↗</span></a>
+    </div>
+  </header>
+  <section class="research-section" aria-labelledby="question-title">
+    <h2 id="question-title">Learning what the model is missing</h2>
+    <p>Sequential low-rank methods build an update one rank-one component at a time. In a linear model, the gradient can show what the model still needs to learn—the residual. With a nonlinear activation, that signal is less direct.</p>
+    <p>We studied this question in a single-layer Leaky-ReLU model with Gaussian inputs. The scaled gradient contains the residual plus two sources of error: nonlinear bias and sampling noise. To recover a useful direction, these errors must be small compared with the gap between the residual’s leading singular values.</p>
+    <div class="research-equation" aria-label="Scaled gradient equals residual plus nonlinear bias plus sampling error">
+      <span>Scaled gradient</span><b aria-hidden="true">=</b><span>Residual</span><b aria-hidden="true">+</b><span>Nonlinear bias</span><b aria-hidden="true">+</b><span>Sampling error</span>
+    </div>
+  </section>
+  <section class="research-section" aria-labelledby="method-title">
+    <div>
+      <h2 id="method-title">Select, fit, then freeze</h2>
+      <ol class="method-steps">
+        <li><strong>Select a direction.</strong> Take the leading left and right singular vectors of a scaled gradient computed on a fresh batch.</li>
+        <li><strong>Fit one amplitude.</strong> Keep these directions fixed and refine a single scalar controlling the size of the update.</li>
+        <li><strong>Freeze and repeat.</strong> Add the fitted rank-one component, then compute the next gradient from the updated model.</li>
+      </ol>
+      <p>Under the theory’s local assumptions, the final error has two parts: components that have not yet been learned, and errors accumulated during earlier updates. Each step adds one rank, so a single run produces models of increasing rank. Choosing when to stop without knowing the target rank remains an open question.</p>
+    </div>
+  </section>
+  <section class="research-section scope-note" aria-labelledby="scope-title">
+    <h2 id="scope-title">Scope of the guarantees</h2>
+    <p>The local recovery results assume Gaussian inputs, one Leaky-ReLU layer, fresh batches, sector control, and separated oracle singular values. They analyze fixed directions with scalar fitting. Deep-network convergence and bounds on free-factor rotation remain open.</p>
+    <p>The memory benefit concerns active optimizer state. It does not imply reduced total memory, gradient computation, or storage of accumulated updates. Synthetic experiments examine the per-stage diagnostic; frozen-feature image experiments explore an additional connection to active-state memory.</p>
+  </section>
+  <footer><div class="footer-meta"><span>Mahtab Alizadeh Vandchali</span><a href="index.html#publications">Back to publications ↑</a></div></footer>
+</main>
+</body>
+</html>
